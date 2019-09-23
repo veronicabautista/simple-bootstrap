@@ -1,0 +1,162 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+}
+
+body{
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background: linear-gradient(176deg, rgba(9,9,121,1) 0%, rgba(13,5,151,1) 50%, rgba(0,212,255,1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p{margin-bottom: 0}
+
+/* ANIMATION */
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+/* HEADER */
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  margin: 20px 0 20px 0;
+}
+
+
+/* MAIN */
+
+.container-fluid{
+  padding: 0px;
+}
+.main__personal,.main__experience,.main__education{
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.0125), 0 1px 1px rgba(0,0,0,0.05);
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
+h2{
+  margin: 5px 0 5px 0;
+  font-family: 'Roboto', sans-serif;
+  color: #090979;
+}
+strong{
+  color: #0d0597;
+}
+
+p{
+  color: #333
+}
+
+
+/* 2 columnas */
+@media (min-width: 600px) and (max-width: 1200px) {
+  body{
+    height: 100vh;
+  }
+  .main__personal{
+    height: 128%;
+    font-size: 20px;
+  }
+  .main__personal ul li{
+    padding: 20px 0 20px 0;
+  }
+
+  /* @media (min-width: 990px){
+    .main__education{
+      margin-right: 30px;
+    }
+  } */
+  
+  .main__education--info ul, .main__experience--info ul{
+    width: 90%;
+  }
+  
+  .main__education ul li, .main__experience ul li{
+    text-align: left;
+    padding: 20px 20px 0 0;
+    display: -webkit-inline-box;
+    max-width: 85%;
+  }
+  .main__education ul li strong, .main__experience ul li strong{
+    padding-left: 5px ;
+  }
+  main div .main__experience{
+    top: -100px;
+  }
+}
+
+
+/* 3 columnas */
+@media (min-width: 1200px) {
+  body{
+    height: 100vh;
+  }
+
+  .main__education{
+    margin-right: 30px;
+  }
+
+  .main__personal ul li, .main__education ul li, .main__experience ul li{
+    text-align: left;
+    padding: 20px 20px 0 0;
+    display: -webkit-inline-box;
+    max-width: 85%;
+  }
+  .main__personal ul li strong, .main__education ul li strong, .main__experience ul li strong{
+    padding-left: 5px ;
+  }
+
+  .main__experience{
+    top: 0px;
+  }
+}
+
+
